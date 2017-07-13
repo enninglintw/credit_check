@@ -23,6 +23,6 @@ class CreditCheck
   end
 
   def valid?
-
+    results_summed % 10 == 0 ? true : false
   end
 end
