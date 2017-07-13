@@ -17,7 +17,7 @@ class CreditCheck
 
   def sum_digits_over_nine
     double_every_other_digit.map do |digit|
-      digit > 9 ? digit.to_s.split("").inject(0) { |sum, digit| sum + digit.to_i } : digit
+      digit > 9 ? digit.to_s.split("").map(&:to_i).inject(0) { |sum, digit| sum + digit } : digit
     end
   end
 
