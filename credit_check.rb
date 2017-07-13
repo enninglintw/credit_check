@@ -8,7 +8,7 @@ class CreditCheck
   end
 
   def double_every_other_digit
-    check_digit_index = initial_digits.count - 1
+    check_digit_index = @credit.size - 1
 
     initial_digits.each_with_index.map do |digit, index|
       (check_digit_index - index).odd? ? digit * 2 : digit
