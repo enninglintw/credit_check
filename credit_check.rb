@@ -3,6 +3,10 @@ class CreditCheck
     @credit = credit
   end
 
+  def into_array
+    @credit.split("").map(&:to_i)
+  end
+
   def double_every_other_digit
     digits = @credit.split("")
     check_digit_index = digits.count - 1
