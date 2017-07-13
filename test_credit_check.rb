@@ -17,6 +17,14 @@ class TestCreditCheck < Minitest::Test
     @credit_check_10 = CreditCheck.new("342801633855673")
   end
 
+  def test_reversed_credit
+    assert_equal "3450527745379294", @credit_check_1.reversed_credit
+  end
+
+  def test_doubled_and_summed_credit
+    assert_equal "3850547541359498", @credit_check_1.doubled_and_summed_credit
+  end
+
   def test_initial_digits
     assert_equal [4, 9, 2, 9, 7, 3, 5, 4, 7, 7, 2, 5, 0, 5, 4, 3], @credit_check_1.initial_digits
   end
