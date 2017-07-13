@@ -8,11 +8,10 @@ class CreditCheck
   end
 
   def double_every_other_digit
-    digits = @credit.split("")
-    check_digit_index = digits.count - 1
+    check_digit_index = into_array.count - 1
 
-    digits.each_with_index.map do |digit, index|
-      (check_digit_index - index).odd? ? digit.to_i * 2 : digit.to_i
+    into_array.each_with_index.map do |digit, index|
+      (check_digit_index - index).odd? ? digit * 2 : digit
     end
   end
 
