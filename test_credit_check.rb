@@ -1,4 +1,5 @@
 require "minitest/autorun"
+require_relative "credit_check"
 
 class TestCreditCheck < Minitest::Test
   def setup

@@ -1,0 +1,2 @@
+class CreditCheck
+end
