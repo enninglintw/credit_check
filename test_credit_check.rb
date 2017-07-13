@@ -17,8 +17,8 @@ class TestCreditCheck < Minitest::Test
     @credit_check_10 = CreditCheck.new("342801633855673")
   end
 
-  def test_into_array
-    assert_equal [4, 9, 2, 9, 7, 3, 5, 4, 7, 7, 2, 5, 0, 5, 4, 3], @credit_check_1.into_array
+  def test_initial_digits
+    assert_equal [4, 9, 2, 9, 7, 3, 5, 4, 7, 7, 2, 5, 0, 5, 4, 3], @credit_check_1.initial_digits
   end
 
   def test_double_every_other_digit

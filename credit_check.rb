@@ -3,14 +3,14 @@ class CreditCheck
     @credit = credit
   end
 
-  def into_array
+  def initial_digits
     @credit.split("").map(&:to_i)
   end
 
   def double_every_other_digit
-    check_digit_index = into_array.count - 1
+    check_digit_index = initial_digits.count - 1
 
-    into_array.each_with_index.map do |digit, index|
+    initial_digits.each_with_index.map do |digit, index|
       (check_digit_index - index).odd? ? digit * 2 : digit
     end
   end
