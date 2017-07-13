@@ -14,6 +14,10 @@ class TestCreditCheck < Minitest::Test
     assert_equal [8, 9, 4, 9, 5, 3, 1, 4, 5, 7, 4, 5, 0, 5, 8, 3], @credit_check.sum_digits_over_nine
   end
 
+  def test_results_summed
+    assert_equal 80, @credit_check.results_summed
+  end
+
   def test_valid
     assert_equal true, @credit_check.valid?
   end
