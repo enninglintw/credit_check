@@ -18,6 +18,10 @@ class CreditCheck
     end
   end
 
+  def results_summed
+    sum_digits_over_nine.inject(0) { |sum, digit| sum + digit }
+  end
+
   def valid?
 
   end
